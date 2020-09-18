@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+:root {
+    --bcg-color: rgb(71, 54, 54);
+    --dirty-white: rgb(238, 228, 228);
+    --btn-bcg: rgb(47, 23, 23); 
+    --btn-color: rgb(185, 218, 205);
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bcg-color);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background: var(--dirty-white);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background: var(--btn-bcg);
+    border-radius: 10px;
+    color: var(--btn-color);
+    outline: none;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background: var(--bcg-color);
+}
+
+#text {
+    font-size: 1.4rem;
+}
