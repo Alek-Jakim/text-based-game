@@ -51,44 +51,44 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+        text: 'You wake up in a strange place and you see a magic mushroom the size of a dog.',
         options: [
             {
-                text: 'Take the goo',
-                setState: { blueGoo: true },
+                text: 'Take the mushroom',
+                setState: { mushroom: true },
                 nextText: 2
             },
             {
-                text: 'Leave the goo',
+                text: 'Leave the mushroom',
                 nextText: 2
             }
         ]
     },
     {
         id: 2,
-        text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+        text: 'You venture forth in search of destiny when you come across a trader.',
         options: [
             {
-                text: 'Trade the goo for a sword',
-                requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
+                text: 'Trade the mushroom for a sword',
+                requiredState: (currentState) => currentState.mushroom,
+                setState: { mushroom: false, sword: true },
                 nextText: 3
             },
             {
-                text: 'Trade the goo for a shield',
-                requiredState: (currentState) => currentState.blueGoo,
+                text: 'Trade the mushroom for a shield',
+                requiredState: (currentState) => currentState.mushroom,
                 setState: { blueGoo: false, shield: true },
                 nextText: 3
             },
             {
-                text: 'Ignore the merchant',
+                text: 'Ignore the trader',
                 nextText: 3
             }
         ]
     },
     {
         id: 3,
-        text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+        text: 'After leaving the trader you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
         options: [
             {
                 text: 'Explore the castle',
@@ -106,7 +106,7 @@ const textNodes = [
     },
     {
         id: 4,
-        text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+        text: 'You are so tired that you fall asleep while exploring the castle and are killed by Lamia, the terrible monster.',
         options: [
             {
                 text: 'Restart',
@@ -136,14 +136,14 @@ const textNodes = [
     },
     {
         id: 7,
-        text: 'While exploring the castle you come across a horrible monster in your path.',
+        text: 'While exploring the castle you come across Lamia standing in your path.',
         options: [
             {
                 text: 'Try to run',
                 nextText: 8
             },
             {
-                text: 'Attack it with your sword',
+                text: 'Attack her with your sword',
                 requiredState: (currentState) => currentState.sword,
                 nextText: 9
             },
@@ -153,15 +153,15 @@ const textNodes = [
                 nextText: 10
             },
             {
-                text: 'Throw the blue goo at it',
-                requiredState: (currentState) => currentState.blueGoo,
+                text: 'Throw the mushroom at her',
+                requiredState: (currentState) => currentState.mushroom,
                 nextText: 11
             }
         ]
     },
     {
         id: 8,
-        text: 'Your attempts to run are in vain and the monster easily catches.',
+        text: 'Your attempts to run are in vain and Lamia devours you.',
         options: [
             {
                 text: 'Restart',
@@ -171,7 +171,7 @@ const textNodes = [
     },
     {
         id: 9,
-        text: 'You foolishly thought this monster could be slain with a single sword.',
+        text: 'You foolishly thought Lamia could be slain with a single sword.',
         options: [
             {
                 text: 'Restart',
@@ -181,7 +181,7 @@ const textNodes = [
     },
     {
         id: 10,
-        text: 'The monster laughed as you hid behind your shield and ate you.',
+        text: 'Lamia laughed as you hid behind your shield and ate you.',
         options: [
             {
                 text: 'Restart',
@@ -191,7 +191,7 @@ const textNodes = [
     },
     {
         id: 11,
-        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text: 'You threw your mushroom at Lamia and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
         options: [
             {
                 text: 'Congratulations. Play Again.',
